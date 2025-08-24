@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scientific Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="calculator-container">
+    <!-- 🌗 Theme Toggle -->
+    <button id="theme-toggle">🌙 Dark Mode</button>
+
+    <div class="calculator">
+      <input type="text" id="display" disabled>
+
+      <!-- Mode toggle -->
+      <div class="mode">
+        <button id="angle-mode">Rad</button>
+      </div>
+
+      <!-- Scientific Row -->
+      <div class="scientific">
+        <button onclick="appendFunc('sin(')">sin</button>
+        <button onclick="appendFunc('cos(')">cos</button>
+        <button onclick="appendFunc('tan(')">tan</button>
+        <button onclick="appendFunc('log(')">log</button>
+        <button onclick="appendFunc('ln(')">ln</button>
+        <button onclick="appendValue('π')">π</button>
+        <button onclick="appendValue('e')">e</button>
+        <button onclick="factorial()">x!</button>
+        <button onclick="appendValue('^')">xʸ</button>
+        <button onclick="square()">x²</button>
+      </div>
+
+      <!-- Memory Buttons -->
+      <div class="memory">
+        <button onclick="memoryClear()">MC</button>
+        <button onclick="memoryRecall()">MR</button>
+        <button onclick="memoryAdd()">M+</button>
+        <button onclick="memorySubtract()">M-</button>
+      </div>
+
+      <!-- Standard Calculator Buttons -->
+      <div class="buttons">
+        <button onclick="clearDisplay()">AC</button>
+        <button onclick="appendValue('%')">%</button>
+        <button onclick="appendValue('/')">÷</button>
+        <button onclick="backspace()">⌫</button>
+
+        <button onclick="appendValue('7')">7</button>
+        <button onclick="appendValue('8')">8</button>
+        <button onclick="appendValue('9')">9</button>
+        <button onclick="appendValue('*')">×</button>
+
+        <button onclick="appendValue('4')">4</button>
+        <button onclick="appendValue('5')">5</button>
+        <button onclick="appendValue('6')">6</button>
+        <button onclick="appendValue('-')">−</button>
+
+        <button onclick="appendValue('1')">1</button>
+        <button onclick="appendValue('2')">2</button>
+        <button onclick="appendValue('3')">3</button>
+        <button onclick="appendValue('+')">+</button>
+
+        <button onclick="appendValue('0')" class="zero">0</button>
+        <button onclick="appendValue('.')">.</button>
+        <button onclick="calculate()" class="equal">=</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
